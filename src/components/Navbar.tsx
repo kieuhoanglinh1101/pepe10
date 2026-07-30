@@ -93,9 +93,9 @@ export function Navbar() {
   return (
     <AnimatePresence initial={false}>
       {visible && (
-        <motion.div
-          key="navbar"
-          className="fixed top-6 left-0 right-0 z-[100] flex justify-center px-6 pointer-events-none"
+       <motion.div
+  key="navbar"
+  className="fixed top-6 left-0 right-0 z-[100] pointer-events-none"
           initial={{ opacity: 0, y: -24 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -24 }}
