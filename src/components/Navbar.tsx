@@ -180,7 +180,7 @@ export function Navbar() {
   {/* RIGHT BUY BUTTON */}
   <button
     onClick={() => scrollToId('how-to-buy')}
-    className="pointer-events-auto absolute right-8 top-0 px-6 py-3 rounded-full bg-green-400 text-black font-bold hover:scale-105 transition"
+    className="pointer-events-auto absolute right-24 top-0 px-6 py-3 rounded-full bg-green-400 text-black font-bold hover:scale-105 transition"
   >
     Buy $PEPE
   </button>
