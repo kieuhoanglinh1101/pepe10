@@ -3,7 +3,7 @@ import { useReveal } from '@/hooks/useReveal';
 
 // ─── Image assets ────────────────────────────────────────────────────────────
 const CARD_IMAGES = [
-  'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2003_02_50%20PM%20(2).webp',
+  'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_41_32%20PM.webp',
   'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2003_02_50%20PM.png',
   'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%2015_00_25%2030%20thg%207,%202026.png',
   'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%2015_08_19%2030%20thg%207,%202026.webp',
