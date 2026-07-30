@@ -112,20 +112,7 @@ export function Navbar() {
               boxShadow: '0 0 0 1px rgba(74,222,128,0.06), 0 8px 32px rgba(0,0,0,0.45), 0 0 40px rgba(74,222,128,0.07)',
             }}
           >
-            {/* Logo (left) — scrolls to Hero */}
-            <button
-              onClick={() => scrollToId('hero')}
-              className="relative z-10 flex items-center gap-2 pr-3 mr-1 border-r border-white/10"
-              aria-label="Back to top"
-            >
-              <span
-                className="text-xl font-black tracking-tight text-green-400"
-                style={{ fontFamily: '"JetBrains Mono", monospace' }}
-              >
-                $PEPE
-              </span>
-            </button>
-
+            
             {/* Sliding active pill */}
             {pillStyle && (
               <motion.span
@@ -160,14 +147,6 @@ export function Navbar() {
               </a>
             ))}
 
-            {/* Buy button (right) — scrolls to How to Buy */}
-            <button
-              onClick={() => scrollToId('how-to-buy')}
-              className="relative z-10 ml-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold text-black bg-green-400 hover:bg-green-300 transition-all duration-200 hover:scale-105"
-              style={{ fontFamily: '"Space Grotesk", sans-serif', fontWeight: 700 }}
-            >
-              Buy $PEPE
-            </button>
           </nav>
         </motion.div>
       )}
