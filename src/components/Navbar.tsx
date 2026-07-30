@@ -105,7 +105,7 @@ export function Navbar() {
   {/* LEFT LOGO */}
   <button
     onClick={() => scrollToId('hero')}
-    className="pointer-events-auto absolute left-20 top-1 text-3xl font-black text-green-400"
+    className="pointer-events-auto absolute left-30 top-1 text-3xl font-black text-green-400"
     style={{ fontFamily: '"JetBrains Mono", monospace' }}
   >
     $PEPE
