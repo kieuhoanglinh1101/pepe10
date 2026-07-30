@@ -66,7 +66,7 @@ export function Tokenomics() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(https://ik.imagekit.io/zznoau6lx/fd38eafe-25f9-4089-8490-8044107a3373.png)' }}
+        style={{ backgroundImage: 'url(https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%2016_07_18%2030%20thg%207,%202026.webp)' }}
       />
       <div className="absolute inset-0 bg-black/70" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
