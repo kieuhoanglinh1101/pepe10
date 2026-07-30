@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Menu, X } from 'lucide-react';
 import { scrollToId } from '@/hooks/useScrollTo';
 
 const NAV_ITEMS = [
@@ -16,6 +17,7 @@ export function Navbar() {
   // -1 = no active item (Hero / between sections)
   const [activeIndex, setActiveIndex] = useState(-1);
   const [visible, setVisible] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
   const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
   const navRef = useRef<HTMLDivElement>(null);
@@ -83,22 +85,28 @@ export function Navbar() {
     });
   }, [activeIndex]);
 
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    scrollToId(href.slice(1));
+  };
+
   return (
     <AnimatePresence initial={false}>
       {visible && (
       <motion.div
   key="navbar"
-  className="fixed top-6 left-0 right-0 z-[100] pointer-events-none"
+  className="fixed top-6 left-0 right-0 z-[100] pointer-events-none px-4 sm:px-6"
   initial={{ opacity: 0, y: -24 }}
   animate={{ opacity: 1, y: 0 }}
   exit={{ opacity: 0, y: -24 }}
   transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
 >
 
-  {/* LEFT LOGO */}
+  {/* LEFT LOGO — desktop: absolute left-24, mobile: in-flow left edge */}
   <button
-    onClick={() => scrollToId('hero')}
-    className="pointer-events-auto absolute left-24 top-1 text-3xl font-black text-green-400 pepe-logo-glow"
+    onClick={() => { setMenuOpen(false); scrollToId('hero'); }}
+    className="pointer-events-auto absolute left-6 sm:left-24 top-1 text-2xl sm:text-3xl font-black text-green-400 pepe-logo-glow"
     style={{
       fontFamily: '"Luckiest Guy", cursive',
       letterSpacing: '0.01em',
@@ -108,8 +116,8 @@ export function Navbar() {
     $PEPE
   </button>
 
-  {/* CENTER NAV */}
-  <div className="flex justify-center">
+  {/* CENTER NAV — desktop only */}
+  <div className="hidden md:flex justify-center">
 
     <nav
       ref={navRef}
@@ -153,10 +161,7 @@ export function Navbar() {
             itemRefs.current[i] = el;
           }}
           href={item.href}
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToId(item.href.slice(1));
-          }}
+          onClick={(e) => handleNavClick(e, item.href)}
           className="relative z-10 px-4 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap"
           style={{
             fontFamily: '"Space Grotesk", sans-serif',
@@ -174,10 +179,11 @@ export function Navbar() {
 
   </div>
 
-  {/* RIGHT BUY BUTTON */}
+  {/* RIGHT BUY BUTTON — desktop only (md+). On mobile, the hamburger menu
+      contains a Buy $PEPE button instead. */}
   <button
     onClick={() => scrollToId('how-to-buy')}
-    className="pointer-events-auto absolute right-24 top-0 px-6 py-3 rounded-full bg-green-400 text-black hover:scale-105 transition pepe-buy-glow"
+    className="pointer-events-auto hidden md:flex absolute right-24 top-0 px-6 py-3 rounded-full bg-green-400 text-black hover:scale-105 transition text-base items-center"
     style={{
       fontFamily: '"Space Grotesk", sans-serif',
       fontWeight: 800,
@@ -186,6 +192,63 @@ export function Navbar() {
   >
     Buy $PEPE
   </button>
+
+  {/* MOBILE HAMBURGER — visible only below md */}
+  <button
+    onClick={() => setMenuOpen(o => !o)}
+    className="pointer-events-auto md:hidden absolute right-6 top-0 w-10 h-10 flex items-center justify-center rounded-full"
+    style={{
+      background: 'rgba(4,12,6,0.75)',
+      backdropFilter: 'blur(18px)',
+      WebkitBackdropFilter: 'blur(18px)',
+      border: '1px solid rgba(74,222,128,0.22)',
+    }}
+    aria-label="Toggle menu"
+  >
+    {menuOpen ? <X className="w-5 h-5 text-green-400" /> : <Menu className="w-5 h-5 text-green-400" />}
+  </button>
+
+  {/* MOBILE DROPDOWN MENU */}
+  <AnimatePresence>
+    {menuOpen && (
+      <motion.nav
+        initial={{ opacity: 0, y: -12 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -12 }}
+        transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        className="md:hidden pointer-events-auto absolute top-16 left-4 right-4 rounded-2xl overflow-hidden"
+        style={{
+          background: 'rgba(4,12,6,0.92)',
+          backdropFilter: 'blur(18px)',
+          WebkitBackdropFilter: 'blur(18px)',
+          border: '1px solid rgba(74,222,128,0.22)',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.5), 0 0 40px rgba(74,222,128,0.07)',
+        }}
+      >
+        {NAV_ITEMS.map((item, i) => (
+          <a
+            key={item.label}
+            href={item.href}
+            onClick={(e) => handleNavClick(e, item.href)}
+            className="block px-6 py-3.5 text-sm font-semibold border-b border-white/5 last:border-0 transition-colors hover:bg-green-500/10"
+            style={{
+              fontFamily: '"Space Grotesk", sans-serif',
+              color: i === activeIndex ? '#4ade80' : 'rgba(156,163,175,0.9)',
+            }}
+          >
+            {item.label}
+          </a>
+        ))}
+        <button
+          onClick={() => { setMenuOpen(false); scrollToId('how-to-buy'); }}
+          className="w-full px-6 py-3.5 text-sm font-bold text-black bg-green-400 transition-colors hover:bg-green-300"
+          style={{ fontFamily: '"Space Grotesk", sans-serif' }}
+        >
+          Buy $PEPE
+        </button>
+      </motion.nav>
+    )}
+  </AnimatePresence>
 
 </motion.div>
       )}

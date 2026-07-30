@@ -262,7 +262,7 @@ export function HeroScene() {
 
       <div
         ref={glowRef}
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full pointer-events-none z-[14] will-change-transform"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] rounded-full pointer-events-none z-[14] will-change-transform"
         style={{
           background: 'radial-gradient(circle, rgba(74,222,128,0.12) 0%, transparent 70%)',
           animation: 'breathe 7s ease-in-out infinite',
@@ -272,7 +272,7 @@ export function HeroScene() {
       <div ref={contentRef} className="relative z-20 flex flex-col h-screen will-change-transform">
         <div className="relative z-20 flex items-center justify-between px-8 py-6 max-w-7xl mx-auto w-full" />
 
-        <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-6 pb-24 pt-4 sm:pt-8">
+        <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20 sm:pb-24 pt-4 sm:pt-8">
           <div className="inline-flex items-center gap-2 mb-10 px-4 py-1.5 rounded-full border border-green-500/40 bg-green-500/10 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             <span className="text-green-400 text-xs font-semibold tracking-widest uppercase" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>Live on Ethereum</span>
@@ -335,7 +335,7 @@ export function HeroScene() {
             Pepe is here to make memecoins great again.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto px-4 sm:px-0">
             <a
               href="#how-to-buy"
               className="hero-btn-primary group relative inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base transition-all duration-300"
@@ -368,7 +368,7 @@ export function HeroScene() {
             </a>
           </div>
 
-          <div className="grid grid-cols-3 gap-6 sm:gap-14">
+          <div className="grid grid-cols-3 gap-4 sm:gap-14">
             {STATS.map(({ label, value, icon: Icon }) => (
               <div
                 key={label}

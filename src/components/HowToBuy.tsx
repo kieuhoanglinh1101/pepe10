@@ -50,12 +50,12 @@ export function HowToBuy() {
       ref={ref}
       className={`section-full relative py-12 px-6 overflow-hidden mesh-bg noise section-reveal ${visible ? 'is-visible' : ''}`}
     >
-      <div className="absolute -top-10 right-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-green-600/8 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute -top-10 right-1/4 w-40 h-40 sm:w-80 sm:h-80 bg-green-500/10 rounded-full blur-[60px] sm:blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-green-600/8 rounded-full blur-[70px] sm:blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* Heading */}
-        <div className={`text-center mb-20 reveal ${visible ? 'is-visible' : ''}`}>
+        <div className={`text-center mb-12 sm:mb-20 reveal ${visible ? 'is-visible' : ''}`}>
           <span
             className="text-green-400 text-sm font-bold tracking-[0.3em] uppercase"
             style={{ fontFamily: '"Space Grotesk", sans-serif' }}
@@ -79,7 +79,7 @@ export function HowToBuy() {
             FOUR STEPS TO <span style={{ color: '#4ade80', textShadow: '0 0 30px rgba(74,222,128,0.6)' }}>GAINS</span>
           </h2>
           <p
-            className="max-w-xl mx-auto mt-6 text-lg"
+            className="max-w-xl mx-auto mt-6 text-sm sm:text-lg px-2 sm:px-0"
             style={{ fontFamily: '"Space Grotesk", sans-serif', color: '#9ca3af' }}
           >
             Buying $PEPE is easier than explaining crypto to your grandma. Follow along.
@@ -87,11 +87,11 @@ export function HowToBuy() {
         </div>
 
         {/* Card + particles wrapper */}
-        <div className={`max-w-2xl mx-auto reveal ${visible ? 'is-visible' : ''}`}>
+        <div className={`max-w-2xl mx-auto px-2 sm:px-0 reveal ${visible ? 'is-visible' : ''}`}>
           <div className="relative">
             {/* Blockchain packets float around/behind the card */}
             <BlockchainPacketField
-              className="pointer-events-none absolute -inset-x-32 -inset-y-24"
+              className="pointer-events-none absolute -inset-x-16 sm:-inset-x-32 -inset-y-16 sm:-inset-y-24"
               style={{ zIndex: 2 } as CSSProperties}
             />
 

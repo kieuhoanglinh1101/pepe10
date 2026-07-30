@@ -70,7 +70,7 @@ export function Tokenomics() {
       />
       <div className="absolute inset-0 bg-black/70" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-green-500/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[700px] sm:h-[700px] bg-green-500/5 rounded-full blur-[80px] sm:blur-[160px] pointer-events-none" />
       {/* Subtle vignette + ambient lighting for depth */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -83,7 +83,7 @@ export function Tokenomics() {
       />
 
       <div className="relative max-w-6xl mx-auto">
-        <div className={`text-center mb-20 reveal ${visible ? 'is-visible' : ''}`}>
+        <div className={`text-center mb-12 sm:mb-20 reveal ${visible ? 'is-visible' : ''}`}>
           <span
             className="text-green-400 text-sm font-bold tracking-[0.3em] uppercase"
             style={{ fontFamily: '"Space Grotesk", sans-serif' }}
@@ -129,20 +129,20 @@ export function Tokenomics() {
         </div>
 
         {/* Stat counters */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-20">
           {STATS.map((s, i) => (
             <StatCard key={s.label} stat={s} active={visible} index={i} />
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           {/* 3D tilt donut — stationary, glow pulse only */}
           <div className="flex justify-center perspective-1000">
             <div
               ref={tilt.ref}
               onMouseMove={tilt.onMove}
               onMouseLeave={tilt.onLeave}
-              className="relative w-72 h-72"
+              className="relative w-56 h-56 sm:w-72 sm:h-72"
             >
               {/* Outer glow pulse — lighting only, no rotation */}
               <div

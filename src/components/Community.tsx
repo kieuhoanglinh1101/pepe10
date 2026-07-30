@@ -18,8 +18,8 @@ export function Community() {
 
   return (
     <section id="community" ref={ref} className={`section-full relative py-12 px-6 overflow-hidden noise section-reveal ${visible ? 'is-visible' : ''}`} style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.72) 50%, rgba(0,0,0,0.88) 100%), url('https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2003_59_33%20PM.webp')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-green-600/8 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[600px] sm:h-[600px] bg-green-500/10 rounded-full blur-[80px] sm:blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-40 h-40 sm:w-80 sm:h-80 bg-green-600/8 rounded-full blur-[60px] sm:blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto text-center">
         {/* Floating pepe */}
@@ -32,21 +32,21 @@ export function Community() {
 
         <div className={`reveal ${visible ? 'is-visible' : ''}`}>
           <span className="text-green-400 text-sm font-bold tracking-[0.3em] uppercase">Join the Cult</span>
-          <h2 className="text-5xl md:text-7xl font-black text-white mt-3 tracking-tighter leading-none">
+          <h2 className="text-4xl md:text-7xl font-black text-white mt-3 tracking-tighter leading-none">
             RIBBIT <span className="text-glow-green text-green-400">TOGETHER</span>
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto mt-4 text-base">
+          <p className="text-gray-400 max-w-xl mx-auto mt-4 text-sm sm:text-base px-2 sm:px-0">
             The strongest community in crypto. Hundreds of thousands of frogs, one mission:
             make memecoins great again.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-8">
           {SOCIALS.map((s, i) => (
             <a
               key={s.label}
               href={s.href}
-              className={`group relative p-6 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-green-500/40 hover:bg-green-500/[0.06] hover:-translate-y-1 transition-all duration-300 reveal ${visible ? 'is-visible' : ''}`}
+              className={`group relative p-4 sm:p-6 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-green-500/40 hover:bg-green-500/[0.06] hover:-translate-y-1 transition-all duration-300 reveal ${visible ? 'is-visible' : ''}`}
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div className="flex items-center justify-between mb-3">
@@ -62,7 +62,8 @@ export function Community() {
 
         <a
           href="#how-to-buy"
-          className={`group relative inline-flex items-center gap-3 mt-10 px-10 py-4 rounded-full font-black text-black bg-green-400 hover:bg-green-300 text-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/30 overflow-hidden reveal ${visible ? 'is-visible' : ''}`}
+          onClick={(e) => { e.preventDefault(); scrollToId('how-to-buy'); }}
+          className={`group relative inline-flex items-center gap-3 mt-8 sm:mt-10 mb-4 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-black text-black bg-green-400 hover:bg-green-300 text-base sm:text-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/30 overflow-hidden reveal ${visible ? 'is-visible' : ''}`}
           style={{ fontFamily: '"Space Grotesk", sans-serif', fontWeight: 800 }}
         >
           <span className="relative z-10">Buy $PEPE Now</span>
@@ -97,7 +98,7 @@ export function Footer() {
             <span className="text-gray-300 text-xs font-mono break-all max-w-[280px] text-center">{CONTRACT}</span>
           </div>
 
-          <div className="flex items-center gap-6 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 md:gap-6 text-sm text-gray-400">
             <a href="#stats" onClick={(e) => { e.preventDefault(); scrollToId('stats'); }} className="hover:text-green-400 transition-colors">Stats</a>
             <a href="#tokenomics" onClick={(e) => { e.preventDefault(); scrollToId('tokenomics'); }} className="hover:text-green-400 transition-colors">Tokenomics</a>
             <a href="#how-to-buy" onClick={(e) => { e.preventDefault(); scrollToId('how-to-buy'); }} className="hover:text-green-400 transition-colors">How to Buy</a>

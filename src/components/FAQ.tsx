@@ -17,15 +17,15 @@ export function FAQ() {
 
   return (
     <section id="faq" ref={ref} className={`section-full relative py-11 px-6 overflow-hidden section-reveal ${visible ? 'is-visible' : ''}`}>
-      <div className="absolute top-1/3 right-0 w-80 h-80 bg-green-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 right-0 w-56 h-56 sm:w-80 sm:h-80 bg-green-500/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-3xl mx-auto">
-        <div className={`text-center mb-20 reveal ${visible ? 'is-visible' : ''}`}>
+        <div className={`text-center mb-12 sm:mb-20 reveal ${visible ? 'is-visible' : ''}`}>
           <div className="inline-flex items-center gap-2 mb-4">
             <HelpCircle className="w-5 h-5 text-green-400" />
             <span className="text-green-400 text-sm font-bold tracking-[0.3em] uppercase">FAQ</span>
           </div>
-          <h2 className="glitch text-5xl md:text-8xl font-black text-white tracking-tighter leading-none" data-text="GOT QUESTIONS?">
+          <h2 className="glitch text-4xl md:text-8xl font-black text-white tracking-tighter leading-none" data-text="GOT QUESTIONS?">
             GOT QUESTIONS?
           </h2>
         </div>
@@ -43,13 +43,13 @@ export function FAQ() {
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="w-full flex items-center justify-between gap-4 p-6 text-left"
+                  className="w-full flex items-center justify-between gap-4 p-4 sm:p-6 text-left"
                 >
                   <span className="flex items-center gap-4">
                     <span className={`text-sm font-mono font-bold transition-colors ${isOpen ? 'text-green-400' : 'text-gray-600'}`}>
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="text-white font-bold text-lg">{faq.q}</span>
+                    <span className="text-white font-bold text-base sm:text-lg">{faq.q}</span>
                   </span>
                   <span className={`flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-green-400 text-black rotate-180' : 'bg-white/10 text-green-400 group-hover:bg-green-500/20'}`}>
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -57,7 +57,7 @@ export function FAQ() {
                 </button>
                 <div className={`grid transition-all duration-300 ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-6 pl-16 text-gray-400 leading-relaxed">{faq.a}</p>
+                    <p className="px-4 sm:px-6 pb-6 pl-12 sm:pl-16 text-sm sm:text-base text-gray-400 leading-relaxed">{faq.a}</p>
                   </div>
                 </div>
               </div>

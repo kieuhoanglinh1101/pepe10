@@ -136,8 +136,9 @@ export function GlobalFollowers() {
             GLOBAL FOLLOWERS
           </h2>
 
-          {/* Social platform row — official icon + platform name */}
-          <div className="flex items-center justify-center gap-10 mt-8">
+          {/* Social platform row — official icon + platform name.
+              Desktop: single row. Mobile: wraps into 2x2 grid with equal spacing. */}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 sm:gap-10 mt-8 max-w-[320px] sm:max-w-none mx-auto">
             {[
               { Icon: InstagramIcon, name: 'Instagram', font: '"Billabong", "Segoe Script", "Comic Sans MS", cursive' },
               { Icon: TikTokIcon, name: 'TikTok', font: '"TikTok Display", "Montserrat", "Arial Black", sans-serif' },
@@ -151,7 +152,7 @@ export function GlobalFollowers() {
                   style={{
                     fontFamily: font,
                     fontWeight: 700,
-                    fontSize: '1rem',
+                    fontSize: 'clamp(0.875rem, 1vw, 1rem)',
                     letterSpacing: name === 'YouTube' ? '0.03em' : '0.01em',
                   }}
                 >
