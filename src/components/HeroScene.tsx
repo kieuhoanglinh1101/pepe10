@@ -3,7 +3,7 @@ import { TrendingUp, Users, Zap } from 'lucide-react';
 import { RevealLayer } from '@/components/RevealLayer';
 import { Particles } from '@/components/Particles';
 
-const BG_IMAGE_1 = 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2001_29_58%20PM.png';
+const BG_IMAGE_1 = 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_16_38%20PM.png';
 
 const LETTERS = ['P', 'E', 'P', 'E'];
 
