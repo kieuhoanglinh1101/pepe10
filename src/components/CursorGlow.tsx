@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const PEPE_CURSOR = 'https://ik.imagekit.io/zznoau6lx/ab6607fb-6001-461c-97d7-ae4f1011db73.png';
+const PEPE_CURSOR = 'https://ik.imagekit.io/zznoau6lx/PEPE/1.webp';
 
 /**
  * Custom cursor with a lagging ambient glow + Pepe face.
