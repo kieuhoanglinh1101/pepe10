@@ -5,7 +5,7 @@ import { useReveal } from '@/hooks/useReveal';
 import Stepper, { Step, type StepperRef } from '@/components/Stepper';
 import { BlockchainPacketField } from '@/components/BlockchainPacketField';
 
-const PLACEHOLDER = 'https://ik.imagekit.io/zznoau6lx/plain-white-background-hd-clean-professional_Y4PE.webp';
+const PLACEHOLDER = 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_51_37%20PM.webp?updatedAt=1785401156748';
 
 const STEPS = [
   {
