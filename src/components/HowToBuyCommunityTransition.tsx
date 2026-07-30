@@ -37,7 +37,7 @@ export function HowToBuyCommunityTransition() {
   const y = useTransform(scrollYProgress, [0, 1], ['100vh', '0vh']);
 
   return (
-    <div ref={containerRef} style={{ height: '200vh' }}>
+    <div id="htb-transition" ref={containerRef} style={{ height: '200vh' }}>
       <div
         style={{
           position: 'sticky',

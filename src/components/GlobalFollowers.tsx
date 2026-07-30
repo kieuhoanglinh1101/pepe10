@@ -141,7 +141,7 @@ export function GlobalFollowers() {
             {[
               { Icon: InstagramIcon, name: 'Instagram', font: '"Billabong", "Segoe Script", "Comic Sans MS", cursive' },
               { Icon: TikTokIcon, name: 'TikTok', font: '"TikTok Display", "Montserrat", "Arial Black", sans-serif' },
-              { Icon: YouTubeIcon, name: 'YouTube', font: '"Trade Gothic", "Impact", "Arial Narrow", sans-serif' },
+              { Icon: YouTubeIcon, name: 'YouTube', font: '"Helvetica Neue", Arial, sans-serif' },
               { Icon: XIcon, name: 'Twitter', font: '"Chirp", "Helvetica Neue", Arial, sans-serif' },
             ].map(({ Icon, name, font }, i) => (
               <div key={i} className="flex items-center gap-2.5">
@@ -152,7 +152,7 @@ export function GlobalFollowers() {
                     fontFamily: font,
                     fontWeight: 700,
                     fontSize: '1rem',
-                    letterSpacing: name === 'YouTube' ? '-0.02em' : '0.01em',
+                    letterSpacing: name === 'YouTube' ? '0.03em' : '0.01em',
                   }}
                 >
                   {name}

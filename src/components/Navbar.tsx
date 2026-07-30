@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { scrollToId } from '@/hooks/useScrollTo';
 
 const NAV_ITEMS = [
   { label: 'Stats',      href: '#stats' },
@@ -10,14 +11,6 @@ const NAV_ITEMS = [
 ] as const;
 
 const SECTION_IDS = ['stats', 'tokenomics', 'how-to-buy', 'community', 'faq'];
-
-// Smooth-scroll with a small offset so the floating navbar never covers the heading.
-function scrollToId(id: string) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const top = el.getBoundingClientRect().top + window.scrollY - 88;
-  window.scrollTo({ top, behavior: 'smooth' });
-}
 
 export function Navbar() {
   // -1 = no active item (Hero / between sections)

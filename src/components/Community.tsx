@@ -1,6 +1,7 @@
 import { Twitter, Send, MessageCircle, Globe, ArrowUpRight } from 'lucide-react';
 import { useReveal } from '@/hooks/useReveal';
 import { useTilt } from '@/hooks/useTilt';
+import { scrollToId } from '@/hooks/useScrollTo';
 
 const SOCIALS = [
   { icon: Twitter,       label: 'Twitter / X',  href: '#', handle: '@pepe',     stat: '420K' },
@@ -97,11 +98,11 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-gray-400">
-            <a href="#stats" className="hover:text-green-400 transition-colors">Stats</a>
-            <a href="#tokenomics" className="hover:text-green-400 transition-colors">Tokenomics</a>
-            <a href="#how-to-buy" className="hover:text-green-400 transition-colors">How to Buy</a>
-            <a href="#community" className="hover:text-green-400 transition-colors">Community</a>
-            <a href="#faq" className="hover:text-green-400 transition-colors">FAQ</a>
+            <a href="#stats" onClick={(e) => { e.preventDefault(); scrollToId('stats'); }} className="hover:text-green-400 transition-colors">Stats</a>
+            <a href="#tokenomics" onClick={(e) => { e.preventDefault(); scrollToId('tokenomics'); }} className="hover:text-green-400 transition-colors">Tokenomics</a>
+            <a href="#how-to-buy" onClick={(e) => { e.preventDefault(); scrollToId('how-to-buy'); }} className="hover:text-green-400 transition-colors">How to Buy</a>
+            <a href="#community" onClick={(e) => { e.preventDefault(); scrollToId('community'); }} className="hover:text-green-400 transition-colors">Community</a>
+            <a href="#faq" onClick={(e) => { e.preventDefault(); scrollToId('faq'); }} className="hover:text-green-400 transition-colors">FAQ</a>
           </div>
         </div>
 
