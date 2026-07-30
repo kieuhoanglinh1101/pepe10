@@ -62,6 +62,7 @@ export function Community() {
         <a
           href="#how-to-buy"
           className={`group relative inline-flex items-center gap-3 mt-10 px-10 py-4 rounded-full font-black text-black bg-green-400 hover:bg-green-300 text-lg transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/30 overflow-hidden reveal ${visible ? 'is-visible' : ''}`}
+          style={{ fontFamily: '"Space Grotesk", sans-serif', fontWeight: 800 }}
         >
           <span className="relative z-10">Buy $PEPE Now</span>
           <span className="absolute inset-0 aurora opacity-0 group-hover:opacity-100" />
@@ -79,7 +80,14 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <span className="text-2xl font-black text-green-400" style={{ fontFamily: 'monospace' }}>$PEPE</span>
+            <span
+              className="text-2xl font-black text-green-400"
+              style={{
+                fontFamily: '"Luckiest Guy", cursive',
+                letterSpacing: '0.01em',
+                textShadow: '0 0 16px rgba(74,222,128,0.45), 0 0 32px rgba(74,222,128,0.2)',
+              }}
+            >$PEPE</span>
             <span className="text-gray-500 text-sm">The most memeable memecoin in existence.</span>
           </div>
 
@@ -89,9 +97,10 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-gray-400">
-            <a href="#community" className="hover:text-green-400 transition-colors">Community</a>
+            <a href="#stats" className="hover:text-green-400 transition-colors">Stats</a>
             <a href="#tokenomics" className="hover:text-green-400 transition-colors">Tokenomics</a>
             <a href="#how-to-buy" className="hover:text-green-400 transition-colors">How to Buy</a>
+            <a href="#community" className="hover:text-green-400 transition-colors">Community</a>
             <a href="#faq" className="hover:text-green-400 transition-colors">FAQ</a>
           </div>
         </div>

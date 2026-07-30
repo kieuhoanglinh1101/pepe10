@@ -511,6 +511,7 @@ export function Impressions() {
               lineHeight: 1,
               letterSpacing: '-0.02em',
               color: '#ffd54a',
+              WebkitTextStroke: '0.04em rgba(255,213,74,0.25)',
               textShadow: glowPulse
                 ? '0 0 16px rgba(74,222,128,.28), 0 0 28px rgba(74,222,128,.12), 0 3px 10px rgba(0,0,0,.55)'
                 : '0 0 10px rgba(74,222,128,.12), 0 3px 10px rgba(0,0,0,.45)',
@@ -543,8 +544,8 @@ export function Impressions() {
           <span
             className="text-gray-400"
             style={{
-              fontFamily: '"Plus Jakarta Sans", sans-serif',
-              fontWeight: 500,
+              fontFamily: '"Space Grotesk", sans-serif',
+              fontWeight: 700,
               fontSize: 'clamp(0.65rem, 1.3vw, 0.85rem)',
               letterSpacing: '0.1em',
             }}

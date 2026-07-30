@@ -105,8 +105,12 @@ export function Navbar() {
   {/* LEFT LOGO */}
   <button
     onClick={() => scrollToId('hero')}
-    className="pointer-events-auto absolute left-24 top-1 text-3xl font-black text-green-400"
-    style={{ fontFamily: '"JetBrains Mono", monospace' }}
+    className="pointer-events-auto absolute left-24 top-1 text-3xl font-black text-green-400 pepe-logo-glow"
+    style={{
+      fontFamily: '"Luckiest Guy", cursive',
+      letterSpacing: '0.01em',
+      textShadow: '0 0 16px rgba(74,222,128,0.45), 0 0 32px rgba(74,222,128,0.2)',
+    }}
   >
     $PEPE
   </button>
@@ -180,7 +184,12 @@ export function Navbar() {
   {/* RIGHT BUY BUTTON */}
   <button
     onClick={() => scrollToId('how-to-buy')}
-    className="pointer-events-auto absolute right-24 top-0 px-6 py-3 rounded-full bg-green-400 text-black font-bold hover:scale-105 transition"
+    className="pointer-events-auto absolute right-24 top-0 px-6 py-3 rounded-full bg-green-400 text-black hover:scale-105 transition pepe-buy-glow"
+    style={{
+      fontFamily: '"Space Grotesk", sans-serif',
+      fontWeight: 800,
+      boxShadow: '0 0 20px rgba(74,222,128,0.4), 0 0 40px rgba(74,222,128,0.15)',
+    }}
   >
     Buy $PEPE
   </button>

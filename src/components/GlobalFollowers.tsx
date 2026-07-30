@@ -53,36 +53,45 @@ const GALLERY_ITEMS = [
 
 function InstagramIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="white" strokeWidth="1.8" />
-      <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="1.8" />
-      <circle cx="17" cy="7" r="1.3" fill="white" />
-    </svg>
+    <img
+      src="https://ik.imagekit.io/zznoau6lx/PEPE/bieu-tuong-instagram-logo-huy-hieu-hien-dai_578229-124%20(1).webp"
+      alt="Instagram"
+      className="object-contain"
+      style={{ width: '26px', height: '26px' }}
+    />
   );
 }
 
 function TikTokIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.73 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43V8.69a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.12z" />
-    </svg>
+    <img
+      src="https://ik.imagekit.io/zznoau6lx/PEPE/tiktok-logo.webp"
+      alt="TikTok"
+      className="object-contain"
+      style={{ width: '24px', height: '24px' }}
+    />
   );
 }
 
 function YouTubeIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="5" width="20" height="14" rx="4" fill="#FF0000" />
-      <path d="M10 8.5l5.5 3.5-5.5 3.5V8.5z" fill="white" />
-    </svg>
+    <img
+      src="https://ik.imagekit.io/zznoau6lx/PEPE/youtube-logo-youtube-icon-transparent-free-png.webp"
+      alt="YouTube"
+      className="object-contain"
+      style={{ width: '28px', height: '28px' }}
+    />
   );
 }
 
 function XIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
+    <img
+      src="https://ik.imagekit.io/zznoau6lx/PEPE/x-logo-minimalist-monochrome-x-logo-2PEkUhZB-Photoroom.webp"
+      alt="Twitter"
+      className="object-contain"
+      style={{ width: '22px', height: '22px' }}
+    />
   );
 }
 
@@ -130,20 +139,20 @@ export function GlobalFollowers() {
           {/* Social platform row — official icon + platform name */}
           <div className="flex items-center justify-center gap-10 mt-8">
             {[
-              { Icon: InstagramIcon, name: 'Instagram' },
-              { Icon: TikTokIcon, name: 'TikTok' },
-              { Icon: YouTubeIcon, name: 'YouTube' },
-              { Icon: XIcon, name: 'Twitter' },
-            ].map(({ Icon, name }, i) => (
+              { Icon: InstagramIcon, name: 'Instagram', font: '"Billabong", "Segoe Script", "Comic Sans MS", cursive' },
+              { Icon: TikTokIcon, name: 'TikTok', font: '"TikTok Display", "Montserrat", "Arial Black", sans-serif' },
+              { Icon: YouTubeIcon, name: 'YouTube', font: '"Trade Gothic", "Impact", "Arial Narrow", sans-serif' },
+              { Icon: XIcon, name: 'Twitter', font: '"Chirp", "Helvetica Neue", Arial, sans-serif' },
+            ].map(({ Icon, name, font }, i) => (
               <div key={i} className="flex items-center gap-2.5">
                 <Icon />
                 <span
                   className="text-white"
                   style={{
-                    fontFamily: '"Space Grotesk", sans-serif',
-                    fontWeight: 600,
+                    fontFamily: font,
+                    fontWeight: 700,
                     fontSize: '1rem',
-                    letterSpacing: '0.02em',
+                    letterSpacing: name === 'YouTube' ? '-0.02em' : '0.01em',
                   }}
                 >
                   {name}

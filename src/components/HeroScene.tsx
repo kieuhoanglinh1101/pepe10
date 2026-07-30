@@ -291,8 +291,8 @@ export function HeroScene() {
                 '0 2px 0 #166534,' +
                 '0 4px 0 #14532d,' +
                 '0 6px 8px rgba(0,0,0,0.6),' +
-                '0 0 30px rgba(74,222,128,0.45),' +
-                '0 0 80px rgba(74,222,128,0.2)',
+                '0 0 36px rgba(74,222,128,0.55),' +
+                '0 0 90px rgba(74,222,128,0.25)',
             }}
           >
             {LETTERS.map((ch, i) => (
@@ -345,7 +345,7 @@ export function HeroScene() {
                 color: '#052e16',
                 background: 'linear-gradient(180deg, #86efac 0%, #4ade80 100%)',
                 border: '2px solid #4ade80',
-                boxShadow: '0 0 24px rgba(74,222,128,0.35), inset 0 1px 0 rgba(255,255,255,0.4)',
+                boxShadow: '0 0 24px rgba(74,222,128,0.45), 0 0 48px rgba(74,222,128,0.18), inset 0 1px 0 rgba(255,255,255,0.4)',
               }}
             >
               <TrendingUp className="w-4 h-4" />
