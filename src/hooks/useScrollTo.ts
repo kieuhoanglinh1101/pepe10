@@ -19,27 +19,38 @@ export function scrollToId(id: string) {
   const lenis = getLenis();
 
   // Pinned transition sections — target the container, not the section itself.
-  if (id === 'how-to-buy' || id === 'community') {
+  if (id === 'how-to-buy') {
     const container = document.getElementById('htb-transition');
+
     if (container && lenis) {
-      lenis.scrollTo(container, { offset: -NAV_OFFSET });
-      return;
+        lenis.scrollTo(container, { offset: 0 });
+        return;
     }
+
     if (container) {
-      const top = container.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-      window.scrollTo({ top, behavior: 'smooth' });
-      return;
+        window.scrollTo({
+            top: container.offsetTop,
+            behavior: 'smooth',
+        });
+        return;
     }
-  }
+}
 
-  const el = document.getElementById(id);
-  if (!el) return;
+if (id === 'community') {
+    const container = document.getElementById('htb-transition');
 
-  if (lenis) {
-    lenis.scrollTo(el, { offset: -NAV_OFFSET });
+    if (!container) return;
+
+    const target = container.offsetTop + window.innerHeight;
+
+    if (lenis) {
+        lenis.scrollTo(target);
+        return;
+    }
+
+    window.scrollTo({
+        top: target,
+        behavior: 'smooth',
+    });
     return;
-  }
-
-  const top = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-  window.scrollTo({ top, behavior: 'smooth' });
 }
