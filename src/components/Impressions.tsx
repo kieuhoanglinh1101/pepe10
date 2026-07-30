@@ -5,7 +5,7 @@ import { useReveal } from '@/hooks/useReveal';
 const CARD_IMAGES = [
   'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_56_14%20PM.png',
   'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2003_02_50%20PM.png',
-  'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_56_14%20PM.png',
+  'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%2015_00_25%2030%20thg%207,%202026.png',
   'https://ik.imagekit.io/zznoau6lx/ba586cbf-9111-4337-a242-adf42ef3ed08.png?updatedAt=1784945878828',
   'https://ik.imagekit.io/zznoau6lx/c72a7c09-7dbe-4306-bbb9-aa493129b7c8.png?updatedAt=1784945877243',
   'https://ik.imagekit.io/zznoau6lx/603878db-f2b1-489a-904b-0cf60136067d.png?updatedAt=1784945877108',
