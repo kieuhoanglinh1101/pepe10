@@ -1,45 +1,53 @@
 import CircularGallery from '@/components/CircularGallery';
 
-const GALLERY_ITEMS: { image: string; text: string }[] = [
+const GALLERY_ITEMS = [
   {
-    image: 'https://images.pexels.com/photos/37164032/pexels-photo-37164032.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%2015_23_48%2030%20thg%207,%202026.webp',
     text: 'Instagram @pepe.official 2.1M',
   },
   {
-    image: 'https://images.pexels.com/photos/17578755/pexels-photo-17578755.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_49_48%20PM.webp',
     text: 'TikTok @pepe.dance 1.8M',
   },
   {
-    image: 'https://images.pexels.com/photos/26588739/pexels-photo-26588739.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_51_37%20PM.webp',
     text: 'YouTube Pepe Channel 940K',
   },
   {
-    image: 'https://images.pexels.com/photos/38194675/pexels-photo-38194675.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_52_12%20PM.webp',
     text: 'X @pepe 1.2M',
   },
   {
-    image: 'https://images.pexels.com/photos/18170271/pexels-photo-18170271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_46_19%20PM.webp',
     text: 'Telegram Pepe Army 560K',
   },
   {
-    image: 'https://images.pexels.com/photos/12569715/pexels-photo-12569715.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_53_16%20PM.webp',
     text: 'Discord Pepe Lounge 780K',
   },
   {
-    image: 'https://images.pexels.com/photos/4549411/pexels-photo-4549411.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%2015_22_19%2030%20thg%207,%202026.webp',
     text: 'Instagram Reels 1.3M',
   },
   {
-    image: 'https://images.pexels.com/photos/8368375/pexels-photo-8368375.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_53_48%20PM.webp',
     text: 'TikTok Viral 2.7M',
   },
   {
-    image: 'https://images.pexels.com/photos/6634117/pexels-photo-6634117.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2002_54_55%20PM.webp',
     text: 'Meme Drops 4.1M',
   },
   {
-    image: 'https://images.pexels.com/photos/7480526/pexels-photo-7480526.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2002_56_14%20PM.webp',
     text: 'Trending Now 1.9M',
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%2015_00_25%2030%20thg%207,%202026.webp',
+    text: 'Community Event',
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2002_57_09%20PM.webp',
+    text: 'Pepe Forever',
   },
 ];
 
