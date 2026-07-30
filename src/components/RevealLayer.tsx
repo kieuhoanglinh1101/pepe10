@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-const BG_IMAGE_2 = 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_16_38%20PM.png';
+const BG_IMAGE_2 = 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_16_38%20PM.webp';
 const SPOTLIGHT_R = 280;
 
 /**
