@@ -9,7 +9,7 @@ const CARD_IMAGES = [
   'https://ik.imagekit.io/zznoau6lx/ba586cbf-9111-4337-a242-adf42ef3ed08.png?updatedAt=1784945878828',
   'https://ik.imagekit.io/zznoau6lx/c72a7c09-7dbe-4306-bbb9-aa493129b7c8.png?updatedAt=1784945877243',
   'https://ik.imagekit.io/zznoau6lx/603878db-f2b1-489a-904b-0cf60136067d.png?updatedAt=1784945877108',
-  'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/wp11496855.webp?updatedAt=1785236346465',
+  'https://ik.imagekit.io/zznoau6lx/fc3dfb6d-64a5-4c39-9937-4b0458ad0ef2.png?updatedAt=1784948924675',
   'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/wp11501455-lucy-cyberpunk-wallpapers.webp?updatedAt=1785236345822',
   'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/wp14146132-cyberpunk-edgerunners-desktop-wallpapers.webp?updatedAt=1785235621697',
 ];
