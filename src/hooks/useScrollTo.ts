@@ -54,3 +54,4 @@ if (id === 'community') {
     });
     return;
 }
+]
