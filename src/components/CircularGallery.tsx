@@ -561,20 +561,56 @@ class App {
     borderRadius: number,
     font: string
   ) {
-    const defaultItems = [
-      { image: `https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_56_14%20PM.png`, text: 'Bridge' },
-      { image: `https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2003_02_50%20PM.png`, text: 'Desk Setup' },
-      { image: `https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%2015_00_25%2030%20thg%207,%202026.png`, text: 'Waterfall' },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: 'Deep Diving' },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: 'Train Track' },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: 'Blurry Lights' },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: 'New York' },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: 'Good Boy' },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: 'Palm Trees' }
-    ];
+   const defaultItems = [
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%2015_23_48%2030%20thg%207,%202026.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_49_48%20PM.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_51_37%20PM.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_52_12%20PM.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_46_19%20PM.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_53_16%20PM.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%2015_22_19%2030%20thg%207,%202026.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_53_48%20PM.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2002_54_55%20PM.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2002_56_14%20PM.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%2015_00_25%2030%20thg%207,%202026.webp',
+    text: 'PEPE'
+  },
+  {
+    image: 'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2002_57_09%20PM.webp',
+    text: 'PEPE'
+  }
+];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
     this.medias = this.mediasImages.map((data, index) => {
