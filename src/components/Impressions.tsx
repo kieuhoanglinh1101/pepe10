@@ -549,7 +549,7 @@ export function Impressions() {
               letterSpacing: '0.1em',
             }}
           >
-            Live Internet Activity
+            Real Time Tracker
           </span>
         </div>
 
