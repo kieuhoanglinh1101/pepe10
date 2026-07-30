@@ -93,62 +93,99 @@ export function Navbar() {
   return (
     <AnimatePresence initial={false}>
       {visible && (
-       <motion.div
+      <motion.div
   key="navbar"
   className="fixed top-6 left-0 right-0 z-[100] pointer-events-none"
-          initial={{ opacity: 0, y: -24 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -24 }}
-          transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+  initial={{ opacity: 0, y: -24 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: -24 }}
+  transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+>
+
+  {/* LEFT LOGO */}
+  <button
+    onClick={() => scrollToId('hero')}
+    className="pointer-events-auto absolute left-8 top-1 text-3xl font-black text-green-400"
+    style={{ fontFamily: '"JetBrains Mono", monospace' }}
+  >
+    $PEPE
+  </button>
+
+  {/* CENTER NAV */}
+  <div className="flex justify-center">
+
+    <nav
+      ref={navRef}
+      className="pointer-events-auto relative flex items-center gap-2 px-4 py-2.5 rounded-full"
+      style={{
+        background: 'rgba(4,12,6,0.75)',
+        backdropFilter: 'blur(18px)',
+        WebkitBackdropFilter: 'blur(18px)',
+        border: '1px solid rgba(74,222,128,0.22)',
+        boxShadow:
+          '0 0 0 1px rgba(74,222,128,0.06), 0 8px 32px rgba(0,0,0,0.45), 0 0 40px rgba(74,222,128,0.07)',
+      }}
+    >
+
+      {pillStyle && (
+        <motion.span
+          className="absolute top-[6px] bottom-[6px] rounded-full"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(74,222,128,0.22), rgba(22,163,74,0.18))',
+            border: '1px solid rgba(74,222,128,0.35)',
+            boxShadow: '0 0 12px rgba(74,222,128,0.18)',
+          }}
+          animate={{
+            left: pillStyle.left,
+            width: pillStyle.width,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 380,
+            damping: 36,
+            mass: 0.8,
+          }}
+        />
+      )}
+
+      {NAV_ITEMS.map((item, i) => (
+        <a
+          key={item.label}
+          ref={(el) => {
+            itemRefs.current[i] = el;
+          }}
+          href={item.href}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToId(item.href.slice(1));
+          }}
+          className="relative z-10 px-4 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap"
+          style={{
+            fontFamily: '"Space Grotesk", sans-serif',
+            color:
+              i === activeIndex
+                ? '#4ade80'
+                : 'rgba(156,163,175,0.9)',
+          }}
         >
-          <nav
-            ref={navRef}
-            className="pointer-events-auto relative flex items-center gap-2 pl-4 pr-3 py-2.5 rounded-full"
-            style={{
-              background: 'rgba(4, 12, 6, 0.75)',
-              backdropFilter: 'blur(18px)',
-              WebkitBackdropFilter: 'blur(18px)',
-              border: '1px solid rgba(74,222,128,0.22)',
-              boxShadow: '0 0 0 1px rgba(74,222,128,0.06), 0 8px 32px rgba(0,0,0,0.45), 0 0 40px rgba(74,222,128,0.07)',
-            }}
-          >
-            
-            {/* Sliding active pill */}
-            {pillStyle && (
-              <motion.span
-                className="absolute top-[6px] bottom-[6px] rounded-full"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(74,222,128,0.22) 0%, rgba(22,163,74,0.18) 100%)',
-                  border: '1px solid rgba(74,222,128,0.35)',
-                  boxShadow: '0 0 12px rgba(74,222,128,0.18)',
-                }}
-                animate={{ left: pillStyle.left, width: pillStyle.width }}
-                transition={{ type: 'spring', stiffness: 380, damping: 36, mass: 0.8 }}
-              />
-            )}
+          {item.label}
+        </a>
+      ))}
 
-            {NAV_ITEMS.map((item, i) => (
-              <a
-                key={item.label}
-                ref={el => { itemRefs.current[i] = el; }}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToId(item.href.slice(1));
-                }}
-                className="relative z-10 px-4 py-1.5 rounded-full text-sm font-semibold transition-colors duration-200 whitespace-nowrap"
-                style={{
-                  fontFamily: '"Space Grotesk", sans-serif',
-                  color: i === activeIndex ? '#4ade80' : 'rgba(156,163,175,0.9)',
-                  letterSpacing: '0.03em',
-                }}
-              >
-                {item.label}
-              </a>
-            ))}
+    </nav>
 
-          </nav>
-        </motion.div>
+  </div>
+
+  {/* RIGHT BUY BUTTON */}
+  <button
+    onClick={() => scrollToId('how-to-buy')}
+    className="pointer-events-auto absolute right-8 top-0 px-6 py-3 rounded-full bg-green-400 text-black font-bold hover:scale-105 transition"
+  >
+    Buy $PEPE
+  </button>
+
+</motion.div>
       )}
     </AnimatePresence>
   );
