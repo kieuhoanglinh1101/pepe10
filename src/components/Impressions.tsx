@@ -3,7 +3,7 @@ import { useReveal } from '@/hooks/useReveal';
 
 // ─── Image assets ────────────────────────────────────────────────────────────
 const CARD_IMAGES = [
-  'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/loadingBackground.jpg?updatedAt=1785302424340',
+  'https://ik.imagekit.io/zznoau6lx/bee56bec-991e-4e14-9f93-dbd941924657.png?updatedAt=1784945876969',
   'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/MV5BODU3NTA3ZWQtNDkyZi00NjM2LWI1NDUtNjBlNGVmZmQ0NGZjXkEyXkFqcGc@._V1_.webp?updatedAt=1785252491298',
   'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/rebecca.webp?updatedAt=1785252491273',
   'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/wp11496855_mPEmctV-P.webp?updatedAt=1785252491248',
