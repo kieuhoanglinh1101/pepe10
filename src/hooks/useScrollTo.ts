@@ -9,7 +9,7 @@
  * pinned panel flush under the navbar.
  */
 
-const NAV_OFFSET = 88; // floating navbar height + a little breathing room
+const NAV_OFFSET = 0; // floating navbar height + a little breathing room
 
 function getLenis() {
   return typeof window !== 'undefined' ? window.__lenis : undefined;
