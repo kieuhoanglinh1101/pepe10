@@ -11,7 +11,7 @@ const CARD_IMAGES = [
   'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2003_01_42%20PM.webp',
   'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%2015_02_28%2030%20thg%207,%202026.webp',
   'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%2015_08_19%2030%20thg%207,%202026.webp',
-  'https://ik.imagekit.io/zznoau6lx/30b9b4f1-d012-419c-aac7-e6ddd2c5d09d.png?updatedAt=1784949483352',
+  'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2002_55_20%20PM.webp',
 ];
 
 // Fallback for broken images — Pepe-green gradient square
