@@ -5,7 +5,7 @@ import { useReveal } from '@/hooks/useReveal';
 const CARD_IMAGES = [
   'https://ik.imagekit.io/zznoau6lx/bee56bec-991e-4e14-9f93-dbd941924657.png?updatedAt=1784945876969',
   'https://ik.imagekit.io/zznoau6lx/b4084e0f-7c91-4aa7-8a87-cba98fa11496.png?updatedAt=1784945877231',
-  'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/rebecca.webp?updatedAt=1785252491273',
+  'https://ik.imagekit.io/zznoau6lx/867e7beb-1941-4ade-8b43-890f105c7c2b.png?updatedAt=1784945877318',
   'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/wp11496855_mPEmctV-P.webp?updatedAt=1785252491248',
   'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/david2.webp?updatedAt=1785251906096',
   'https://ik.imagekit.io/zznoau6lx/Cybercoin%20webp/2/loadingBackground%20(1).webp?updatedAt=1785238535218',
