@@ -1,15 +1,4 @@
-/**
- * Centralised anchor navigation that stays in sync with Lenis smooth scrolling.
- *
- * Two sections — "how-to-buy" and "community" — live inside the
- * HowToBuyCommunityTransition: a 200vh container with a sticky 100vh viewport.
- * Because they are pinned via position:sticky, their getBoundingClientRect()
- * shifts as the user scrolls, so we cannot rely on the section's own position.
- * Instead we scroll to the transition container's top for both, which lands the
- * pinned panel flush under the navbar.
- */
-
-const NAV_OFFSET = 0; // floating navbar height + a little breathing room
+const NAV_OFFSET = 0;
 
 function getLenis() {
   return typeof window !== 'undefined' ? window.__lenis : undefined;
@@ -18,25 +7,27 @@ function getLenis() {
 export function scrollToId(id: string) {
   const lenis = getLenis();
 
-  // Pinned transition sections — target the container, not the section itself.
+  // How To Buy
   if (id === 'how-to-buy') {
     const container = document.getElementById('htb-transition');
 
-    if (container && lenis) {
-        lenis.scrollTo(container, { offset: 0 });
-        return;
+    if (!container) return;
+
+    if (lenis) {
+      lenis.scrollTo(container);
+      return;
     }
 
-    if (container) {
-        window.scrollTo({
-            top: container.offsetTop,
-            behavior: 'smooth',
-        });
-        return;
-    }
-}
+    window.scrollTo({
+      top: container.offsetTop,
+      behavior: 'smooth',
+    });
 
-if (id === 'community') {
+    return;
+  }
+
+  // Community
+  if (id === 'community') {
     const container = document.getElementById('htb-transition');
 
     if (!container) return;
@@ -44,13 +35,30 @@ if (id === 'community') {
     const target = container.offsetTop + window.innerHeight;
 
     if (lenis) {
-        lenis.scrollTo(target);
-        return;
+      lenis.scrollTo(target);
+      return;
     }
 
     window.scrollTo({
-        top: target,
-        behavior: 'smooth',
+      top: target,
+      behavior: 'smooth',
     });
+
     return;
+  }
+
+  // All other sections
+  const el = document.getElementById(id);
+
+  if (!el) return;
+
+  if (lenis) {
+    lenis.scrollTo(el);
+    return;
+  }
+
+  window.scrollTo({
+    top: el.offsetTop,
+    behavior: 'smooth',
+  });
 }
