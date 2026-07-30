@@ -9,7 +9,7 @@ const CARD_IMAGES = [
   'https://ik.imagekit.io/zznoau6lx/PEPE/ChatGPT%20Image%20Jul%2030,%202026,%2002_50_47%20PM.webp',
   'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2003_02_50%20PM%20(2).webp',
   'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%20Jul%2030,%202026,%2003_01_42%20PM.webp',
-  'https://ik.imagekit.io/zznoau6lx/fc3dfb6d-64a5-4c39-9937-4b0458ad0ef2.png?updatedAt=1784948924675',
+  'https://ik.imagekit.io/zznoau6lx/PEPE/webp%201/ChatGPT%20Image%2015_02_28%2030%20thg%207,%202026.webp',
   'https://ik.imagekit.io/zznoau6lx/ab6607fb-6001-461c-97d7-ae4f1011db73.png?updatedAt=1784948924506',
   'https://ik.imagekit.io/zznoau6lx/30b9b4f1-d012-419c-aac7-e6ddd2c5d09d.png?updatedAt=1784949483352',
 ];
